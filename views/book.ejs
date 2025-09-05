@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book Tickets - <%= movie.title %></title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <h1>Book Tickets for <%= movie.title %></h1>
+  <form method="POST">
+    <label>Name: <input type="text" name="name" required></label><br>
+    <label>Email: <input type="email" name="email" required></label><br>
+    <label>Quantity: <input type="number" name="qty" min="1" required></label><br>
+    <label>Date: <input type="date" name="date" required></label><br>
+    <label>Showtime:
+      <select name="time">
+        <% showTimes.forEach(t => { %>
+          <option value="<%= t %>"><%= t %></option>
+        <% }) %>
+      </select>
+    </label><br>
+    <button type="submit">Confirm Booking</button>
+  </form>
+</body>
+</html>

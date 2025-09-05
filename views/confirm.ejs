@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Booking Confirmed</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <h1>✅ Booking Confirmed!</h1>
+  <p>Thank you, <%= booking.name %>!</p>
+  <p>You booked <strong><%= booking.qty %></strong> tickets for <strong><%= movie.title %></strong>.</p>
+  <p>Date: <%= booking.date %> | Time: <%= booking.time %></p>
+  <p>Booking ID: <%= booking.id %></p>
+  <a href="/">Back to Home</a>
+</body>
+</html>

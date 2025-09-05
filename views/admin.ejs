@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin - Bookings</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <h1>📋 All Bookings</h1>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Movie</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Qty</th>
+      <th>Date</th>
+      <th>Time</th>
+    </tr>
+    <% bookings.forEach(b => { 
+      const movie = movies.find(m => m.id === b.movieId); %>
+      <tr>
+        <td><%= b.id %></td>
+        <td><%= movie.title %></td>
+        <td><%= b.name %></td>
+        <td><%= b.email %></td>
+        <td><%= b.qty %></td>
+        <td><%= b.date %></td>
+        <td><%= b.time %></td>
+      </tr>
+    <% }) %>
+  </table>
+</body>
+</html>

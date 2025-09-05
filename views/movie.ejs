@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= movie.title %> - Details</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <h1><%= movie.title %></h1>
+  <img src="<%= movie.image %>" alt="<%= movie.title %> poster">
+  <p><%= movie.synopsis %></p>
+  <p><strong>Duration:</strong> <%= movie.duration %> mins</p>
+  <p><strong>Genre:</strong> <%= movie.genre %></p>
+  <p><strong>Rating:</strong> ⭐ <%= movie.rating %></p>
+  <a href="/book/<%= movie.id %>">Book Now</a>
+</body>
+</html>
